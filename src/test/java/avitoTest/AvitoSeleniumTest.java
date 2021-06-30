@@ -18,6 +18,8 @@ public class AvitoSeleniumTest {
     public static Select selectCheckBox;
     private final String CATEGORY = "category";
     private final int VALUE = 3;
+    private final String SEARCH = "Принтер";
+    private final String CITY_SEARCH = "Владивосток";
 
 
     @BeforeClass
@@ -37,9 +39,9 @@ public class AvitoSeleniumTest {
     public void avitoTest(){
         selectCategory = new Select(driver.findElement(By.id(CATEGORY)));
         methodTest.setCategory(selectCategory, ConfProperties.getProperty("category"));
-        methodTest.setSearch(ConfProperties.getProperty("search"));
+        methodTest.setSearch(SEARCH);
         methodTest.setElementLocal();
-        methodTest.setElementCitySearch(ConfProperties.getProperty("citySearch"));
+        methodTest.setElementCitySearch(CITY_SEARCH);
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {

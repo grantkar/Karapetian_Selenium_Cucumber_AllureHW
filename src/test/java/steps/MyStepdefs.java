@@ -61,7 +61,7 @@ public class MyStepdefs {
         captureScreenshot(driver);
     }
 
-    @И("^в поле поиска введено значение (.*)$")
+    @И("^в поле поиска введено значение \"([^\"]*)\"$")
     public void в_поле_поиска_введено_значение_принтер(String str) {
         methodTest.setSearch(str);
         captureScreenshot(driver);
