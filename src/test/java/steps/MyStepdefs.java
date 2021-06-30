@@ -76,12 +76,18 @@ public class MyStepdefs {
     @Тогда("^в поле регион введено значение \"([^\"]*)\"$")
     public void в_поле_регион_введено_значение(String arg1) {
         methodTest.setElementCitySearch(arg1);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        methodTest.setElementCity();
         captureScreenshot(driver);
     }
 
     @И("^нажата кнопка показать объявления$")
     public void нажата_кнопка_показать_объявления() {
-        methodTest.setElementCity();
         methodTest.setElementClickCity();
         captureScreenshot(driver);
     }
