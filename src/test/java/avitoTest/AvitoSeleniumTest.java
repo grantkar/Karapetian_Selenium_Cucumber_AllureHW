@@ -40,6 +40,11 @@ public class AvitoSeleniumTest {
         methodTest.setSearch(ConfProperties.getProperty("search"));
         methodTest.setElementLocal();
         methodTest.setElementCitySearch(ConfProperties.getProperty("citySearch"));
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         methodTest.setElementCity();
         methodTest.setElementClickCity();
         resultTest.setElementCheckBox();
