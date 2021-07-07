@@ -77,7 +77,7 @@ public class MyStepdefs {
     public void в_поле_регион_введено_значение(String arg1) {
         methodTest.setElementCitySearch(arg1);
         try {
-            Thread.sleep(1000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

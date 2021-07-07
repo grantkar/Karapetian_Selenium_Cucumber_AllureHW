@@ -15,7 +15,7 @@ public class MethodTest {
         this.webDriver = webDriver;
     }
 
-    @FindBy(xpath = "//input[@id='search']")
+    @FindBy(xpath = "//input[@class='suggest-root-1v2AH js-suggest suggest_search']")
     private WebElement search;
 
     @FindBy(xpath = "//div[@class='main-select-2pf7p main-location-3j9by']")
